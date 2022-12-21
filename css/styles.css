@@ -1,7 +1,12 @@
+:root {
+    --color-blue-dark: rgb(0, 0, 156);
+    --color-blue-light: azure;
+}
+
 body {
-    background-color: azure;
+    background-color: var(--color-blue-light);
     font-family: 'IBM Plex Mono', monospace;
-    color: rgb(0, 0, 156);
+    color: var(--color-blue-dark);
 }
 
 .bulb {
@@ -13,7 +18,7 @@ body {
     display: grid;
 }
 .garden, .terminal {
-    border: 1px solid rgb(0, 0, 156);
+    border: 1px solid var(--color-blue-dark);
     padding: 1rem;
     margin: 1rem;
 }
