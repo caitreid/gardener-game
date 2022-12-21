@@ -3,10 +3,8 @@
     --color-blue-dark: rgb(0, 0, 156);    
     --filter-blue-dark: invert(16%) sepia(29%) saturate(6858%) hue-rotate(230deg) brightness(87%) contrast(138%);
     
-    --color-disabled: #dab8d1;
-    --filter-disabled: invert(90%) sepia(8%) saturate(1243%) hue-rotate(281deg) brightness(89%) contrast(90%);
-
-
+    --color-disabled: #a5a4e6;
+    --filter-disabled: invert(79%) sepia(51%) saturate(2522%) hue-rotate(194deg) brightness(96%) contrast(87%);
 
     --color-blue-light: azure;
     --border: 1px solid var(--color-blue-dark);
@@ -36,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
     filter: var(--filter-blue-dark);
 }
 
-.disabled > .tool {
+.disabled >.tool {
     filter: var(--filter-disabled);
 }
 
