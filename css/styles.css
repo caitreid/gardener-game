@@ -1,0 +1,29 @@
+body {
+    background-color: azure;
+    font-family: 'IBM Plex Mono', monospace;
+    color: rgb(0, 0, 156);
+}
+
+.bulb {
+    max-width: 3rem;
+    /* stroke: rgb(0, 0, 156); */
+    filter: invert(16%) sepia(29%) saturate(6858%) hue-rotate(230deg) brightness(87%) contrast(138%);
+}
+.container {
+    display: grid;
+}
+.garden, .terminal {
+    border: 1px solid rgb(0, 0, 156);
+    padding: 1rem;
+    margin: 1rem;
+}
+.garden {
+    height: 50vh;
+}
+.terminal {
+    height: 30vh;
+}
+h1, h2 {
+    /* font-weight: normal; */
+    font-weight: 400;
+}
