@@ -1,5 +1,13 @@
 :root {
-    --color-blue-dark: rgb(0, 0, 156);
+
+    --color-blue-dark: rgb(0, 0, 156);    
+    --filter-blue-dark: invert(16%) sepia(29%) saturate(6858%) hue-rotate(230deg) brightness(87%) contrast(138%);
+    
+    --color-disabled: #dab8d1;
+    --filter-disabled: invert(90%) sepia(8%) saturate(1243%) hue-rotate(281deg) brightness(89%) contrast(90%);
+
+
+
     --color-blue-light: azure;
     --border: 1px solid var(--color-blue-dark);
 }
@@ -11,6 +19,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+
     font-weight: 400;
 }
 
@@ -20,8 +29,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .bulb {
     max-width: 3rem;
-    /* stroke: rgb(0, 0, 156); */
-    filter: invert(16%) sepia(29%) saturate(6858%) hue-rotate(230deg) brightness(87%) contrast(138%);
+    
+}
+
+.bulb, .tool {
+    filter: var(--filter-blue-dark);
+}
+
+.disabled > .tool {
+    filter: var(--filter-disabled);
 }
 
 .garden, .terminal {
@@ -34,12 +50,32 @@ h1, h2, h3, h4, h5, h6 {
     height: 50vh;
 }
 
+.tool {
+    max-width:5rem;
+    margin: 0 auto;
+    display: block;
+}
+
 .terminal {
-    height: 30vh;
+    min-height: 30vh;
 }
 
 .equipment {
+    width: 100%;
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: auto; 
+}
+.equipment div {
+    padding: 1rem;
+}
+
+.trowel .tool {
+    transform: scaleX(-1);
+}
+
+.disabled, .disabled > .tool {
+    color: var(--color-disabled);
+    /* filter: var(--filter-disabled); */
 }
