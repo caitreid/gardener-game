@@ -83,3 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 .disabled, .disabled > .tool {
     color: var(--color-disabled-third);
 }
+.equipment-container {
+    border-top: var(--border);
+    /* padding:1rem; */
+}
