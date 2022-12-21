@@ -1,6 +1,7 @@
 :root {
     --color-blue-dark: rgb(0, 0, 156);
     --color-blue-light: azure;
+    --border: 1px solid var(--color-blue-dark);
 }
 
 body {
@@ -9,26 +10,36 @@ body {
     color: var(--color-blue-dark);
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+.container {
+    display: grid;
+}
+
 .bulb {
     max-width: 3rem;
     /* stroke: rgb(0, 0, 156); */
     filter: invert(16%) sepia(29%) saturate(6858%) hue-rotate(230deg) brightness(87%) contrast(138%);
 }
-.container {
-    display: grid;
-}
+
 .garden, .terminal {
-    border: 1px solid var(--color-blue-dark);
+    border: var(--border);
     padding: 1rem;
     margin: 1rem;
 }
+
 .garden {
     height: 50vh;
 }
+
 .terminal {
     height: 30vh;
 }
-h1, h2 {
-    /* font-weight: normal; */
-    font-weight: 400;
+
+.equipment {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
